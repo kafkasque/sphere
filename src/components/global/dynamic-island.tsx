@@ -162,15 +162,15 @@ export function DynamicIsland({ notification, onDismiss, isScrolling }: DynamicI
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}
                 ></motion.span>
-                <span className="text-white text-xs font-medium">Online</span>
+                <span className="text-white text-xs font-medium pr-1">Online</span>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-">
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <button onClick={toggleMusic} className="text-white hover:text-zinc-300 transition-colors">
-                        <Music className="h-5 w-5" />
+                        <Music className="h-4 w-4 pr-1" />
                       </button>
                     </TooltipTrigger>
                     <TooltipContent>
@@ -182,7 +182,7 @@ export function DynamicIsland({ notification, onDismiss, isScrolling }: DynamicI
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <button onClick={toggleSettings} className="text-white hover:text-zinc-300 transition-colors">
+                      <button onClick={toggleSettings} className="text-white hover:text-zinc-300 transition-colors h-4">
                         {getNotificationModeIcon()}
                       </button>
                     </TooltipTrigger>
@@ -294,7 +294,7 @@ export function DynamicIsland({ notification, onDismiss, isScrolling }: DynamicI
                   animate={{ rotate: musicPlaying ? 360 : 0 }}
                   transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
                 >
-                  <Music className="h-6 w-6 text-white" />
+                  {/* <Music className="h-6 w-6 text-white" /> */}
                 </motion.div>
                 <div>
                   <p className="text-white text-sm font-medium">{currentSong.title}</p>
